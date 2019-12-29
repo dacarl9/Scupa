@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Scopa</title>
+    <link rel="stylesheet" href="css/scopa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<!--LOGIN Fenster-->
+<div id="login">
+    <form id="formPlayerName">
+        <div id="nameSetter">
+            <div style="padding: 10px;">
+                <label for="userName">Spielername</label><br>
+                <input style="width: 100%" type="text" id="userName" name="user_name">
+            </div>
+            <div style="padding: 10px;">
+                <button type="submit" class="btn btn-primary btn-block">Spiel starten</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<!--Info Messages-->
+<div id="scopa_info">
+    <p class="success">!!! Scopa !!!</p>
+</div>
+<div id="wait_info">
+    <p class="warning">Auf Gegner warten</p>
+</div>
+<div id="win_info">
+    <p class="success">Herzlichen Glückwunsch Sie haben gewonnen.</p>
+</div>
+<div id="loose_info">
+    <p class="error">Verloren</p>
+</div>
+<div id="errorMessage">
+    <p class="error">Verbindung zum Server konnte nicht hergestellt werden.</p>
+</div>
+
+
+<!--Spiel Übersicht-->
+<div id="game_overview">
+    <button id = "x">
+            X
+    </button>
+</div>
+<div id="restart">
+    <button type="button" class="btn btn-primary btn-lg btn-block">Neustart</button>
+</div>
+
+<!--Spiel Fenster-->
+<div id="game">
+    <div id="playground">
+        <div id="chat-widnow">
+            <div id="title_bar">Chat
+                <div id="title-button">-</div>
+            </div>
+            <div id="chat-box">
+                <form id="chat-form">
+                    <div class="form-group">
+                        <label for="chat-history">Verlauf:</label>
+                        <textarea class="form-control" rows="5" id="chat-history" disabled></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="chat-input">Neue Nachricht:</label>
+                        <input type="text" id="chat-input" autofocus autocomplete="off" class="form-control">
+                    </div>
+                    <div class="buttonHolder">
+                        <button type="button" value="Send" id="send" class="btn btn-primary">Senden</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="gameState">
+            <div id="totalPointView">0:0</div>
+
+            <div id="last-played-card"></div>
+        </div>
+
+
+        <div id="table">
+        </div>
+
+        <div id="hand">
+        </div>
+    </div>
+</div>
+
+<!--Footer Fenster-->
+<footer>
+</footer>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script src="js/ws_client.js"></script>
+</body>
+</html>
